@@ -1,0 +1,11 @@
+{
+  "name": "migra-dev-test",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "node --test ./tests/*.test.*"
+  },
+  "author": "Italo Fernandes",
+  "license": "ISC",
+  "description": "",
+  "type": "module"
+}
