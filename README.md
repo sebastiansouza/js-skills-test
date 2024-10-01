@@ -20,6 +20,7 @@ O objetivo desses exercícios é avaliar sua capacidade de resolver problemas de
 - 5 - Contar Ocorrências de Caracteres
 - 6 - Sistema de Reservas
 - 7 - Caixa Eletrônico
+- 8 - Async/Await em Loops
 
 ## Executando os Testes
 O projeto utiliza o **Node Test Runner** para gerenciar e executar os testes. Certifique-se de ter o **Node.js** instalado na versão **20.x** ou superior.
