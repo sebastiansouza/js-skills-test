@@ -9,7 +9,7 @@ describe("9 - Async/Await em Loops", () => {
   it("deve processar os IDs na ordem correta", async () => {
     const ids = [1, 2, 3, 4, 5];
 
-    const { stdout } = await execPromise("node ./challenges/challenge-9.js");
+    const { stdout } = await execPromise("node ./challenges/challenge-8.js");
 
     const outputLines = stdout
       .trim()
