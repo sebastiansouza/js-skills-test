@@ -13,6 +13,22 @@ Descrição:
 Corrija o código para que as chamadas `fetchData` ocorram de forma sequencial, uma após a outra.
 */
 
+
+// function fetchData(id) {
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       console.log(Dados do ID ${id} recebidos.);
+//       resolve();
+//     }, Math.random() * 1000);
+//   });
+// }
+
+// const ids = [1, 2, 3, 4, 5];
+
+// ids.forEach(async (id) => {
+//   await fetchData(id);
+// });
+
 function fetchData(id) {
   return new Promise((resolve) => {
     setTimeout(() => {
@@ -24,6 +40,19 @@ function fetchData(id) {
 
 const ids = [1, 2, 3, 4, 5];
 
-ids.forEach(async (id) => {
-  await fetchData(id);
-});
+async function processIds() {
+  for (const id of ids) {
+    await fetchData(id);
+  }
+}
+
+processIds();
+
+
+/* 
+
+A função foi modificada para usar `for...of` em vez de `forEach`, pois o `forEach` não lida bem com `async/await`.
+Dentro do `forEach`, a função assíncrona seria executada em paralelo, sem esperar o término de uma execução antes de começar a próxima. 
+Com o `for...of`, podemos usar `await` e garantir que as chamadas sejam feitas de forma sequencial, processando um ID de cada vez.
+
+*/
